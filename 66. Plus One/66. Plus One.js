@@ -2,7 +2,11 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-var plusOne = function(digits) {
+var plusOne = function (digits) {
+    if (digits[digits.length - 1] !== 9) {
+        digits[digits.length - 1] += 1
+        return digits
+    }
     let number = digits.toString()//convert to string
 
     number = number.replace(/,/g, '') //removing ',' from the string
